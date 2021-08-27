@@ -1,0 +1,150 @@
+
+/*Reseteo de valores por defecto*/
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*apariencia del vuero o body*/
+body {
+    font-family: arial;
+    background: #ebd5ea;
+    /* color de fondo para navegadores viejos */
+    background: -webkit-linear-gradient(to right, #baecae, #048d32);
+    /* degradado par los navegadores Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #6af588, #027711);
+    /* degradado para los navegds W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    height: 750px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Apariencia del título*/
+h1{
+    text-align: center;
+    font-weight: 700;
+}
+
+/*apariencia del formulario*/
+form{
+    background: rgba(255, 255, 255, 0.863);
+    padding: 40px 0;
+    box-shadow: rgba(243, 227, 227, 0.8) 20px 20px 5px;
+    border-radius: 10px;
+   
+}
+
+.form{
+    width: 100%;
+    margin: auto;
+
+    color:black;
+}
+
+/*Apariecia de los campos de datos del formulario*/
+form .grupo{
+    position: relative;
+    margin: 45px ;
+}
+
+input {
+    background: none;
+    color: black;
+    font-size: 18px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid black;
+}
+
+textarea {
+    background:rgb(250, 250, 220);
+    border: 1px solid black;
+    resize: none;
+    width:100%;
+}
+
+
+input:focus{ 
+    outline: none;
+    color: #5e5d5d;
+}
+
+label{
+    color: black;
+    font-size: 16px;
+    position: absolute;
+    left: 5px;
+    top: 10px;
+    transition: 0.5s ease all;
+    pointer-events: none;
+}
+
+input:focus~label,
+input:valid~label{
+    top: -14px;
+    font-size: 12px;
+    color: #2196f3;
+}
+
+.barra{
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+.barra::before{
+    content: "";
+    height: 2px;
+    width: 0%;
+    bottom: 0;
+    position: absolute;
+    background: linear-gradient(to right, #B06AB3, #4568DC);
+    transition: 0.3s ease width;
+    left: 0;
+}
+
+input:focus~.barra::before{
+    width: 100%;
+}
+
+/*Apariencia del cuadro de mensaje*/
+.mensaje{
+    width: 90%;
+    text-align: center;
+    margin: auto;
+    color: blue;
+    padding-top: 20px;
+}
+
+/*Apariencia del botòn de envío*/
+button{
+    font-family: arial, times, helvetica;
+    background: #4568DC;
+    /* color de fondo del botón para navegadores antiguos */
+    background: -webkit-linear-gradient(to right, #f1dff1, #700962);
+    /* color de fondo del botón para los navegadores Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #e5d0e6, #991361);
+    /* color de fondo del boton para los navegadores W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border-radius: 3px 3px 3px 3px;
+    display: block;
+    width: 80%;
+    margin: 10px auto;
+    color: #fff;
+    height: 40px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+p {
+    width:100%;
+}
+@media screen and (max-width:500px){
+    form{
+        width: 80%;
+    }
+}
+
